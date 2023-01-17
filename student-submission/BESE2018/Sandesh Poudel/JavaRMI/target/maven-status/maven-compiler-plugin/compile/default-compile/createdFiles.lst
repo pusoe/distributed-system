@@ -1,0 +1,4 @@
+com\mycompany\javarmi\ApplicationServer.class
+com\mycompany\javarmi\HelloService.class
+com\mycompany\javarmi\Client.class
+com\mycompany\javarmi\HelloServant.class
