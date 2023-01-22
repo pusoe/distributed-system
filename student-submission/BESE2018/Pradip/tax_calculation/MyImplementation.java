@@ -1,10 +1,8 @@
 import java.rmi.*;  
-public class MyImplementation implements MyInterface{  
+import java.rmi.server.*;  
+public class MyImplementation extends UnicastRemoteObject implements MyInterface{  
 MyImplementation()throws RemoteException{  
-super();
+super();  
 }
-@Override
-public void Tax(double taxRate, double amount) throws RemoteException {
-  System.out.println("Tax to be paiad is: "+(taxRate/100)*amount);
-}  
-}
+public double tax(double amount, double rate){return (double) ((rate/100)*amount);  
+}}

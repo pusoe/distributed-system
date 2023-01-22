@@ -1,10 +1,8 @@
 import java.rmi.*;  
-public class MyImplementation implements MyInterface{  
+import java.rmi.server.*;  
+public class MyImplementation extends UnicastRemoteObject implements MyInterface{  
 MyImplementation()throws RemoteException{  
-super();
-}
-@Override
-public void Volume(double length, double breadth, double height) throws RemoteException {
-  System.out.println("The required volume is: "+String.format("%2f",(length*breadth*height))+ " cubic meter");
+super();  
 }  
-}
+public double volume(double x, double y, double z){return (double) (x*y*z);};  
+}  

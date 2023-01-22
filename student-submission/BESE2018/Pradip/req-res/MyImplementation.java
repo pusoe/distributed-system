@@ -1,10 +1,8 @@
 import java.rmi.*;  
-public class MyImplementation implements MyInterface{  
+import java.rmi.server.*;  
+public class MyImplementation extends UnicastRemoteObject implements MyInterface{  
 MyImplementation()throws RemoteException{  
 super();  
 }  
-@Override
-public  void display(String x) throws RemoteException {
-   System.out.println("Your name is: "+x);
+public String name(String name){return (String) (name);};  
 }  
-}
