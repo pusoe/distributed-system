@@ -6,12 +6,12 @@ public interface MyInterface extends Remote
     public void printMsg() throws RemoteException;
 
 
-    public void calculateAreaOfCircle(double radius) throws RemoteException;
+    public double calculateAreaOfCircle(double radius) throws RemoteException;
 
-    public void calculateTax(double amount) throws RemoteException;
+    public double calculateTax(double amount) throws RemoteException;
 
     public void setTaxRate(double taxRate) throws RemoteException;
 
 
-    public void calculateVolumeOfRectangle(double length, double breadth, double height) throws RemoteException;
+    public double calculateVolumeOfRectangle(double length, double breadth, double height) throws RemoteException;
 }

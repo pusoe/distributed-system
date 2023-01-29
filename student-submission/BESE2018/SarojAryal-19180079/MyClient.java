@@ -9,18 +9,16 @@ public class MyClient {
         try{
             Registry registry = LocateRegistry.getRegistry("localhost");
             MyInterface stub = (MyInterface) registry.lookup("MyInterface");
-
-            stub.printMsg();
-            stub.calculateAreaOfCircle(15.0);
-            stub.calculateVolumeOfRectangle(15.0, 19.5, 5.14);
                 try (Scanner scanner = new Scanner(System.in)) {
                     System.out.println("Enter the amount : ");
                     double amount = scanner.nextDouble();
-
                     System.out.println("Enter the tax rate: ");
                     double taxRate = scanner.nextDouble();
                     stub.setTaxRate(taxRate);
-                    stub.calculateTax(amount);
+                    System.out.println("The tax amount is: " + stub.calculateTax(amount));
+                    stub.printMsg();
+                    System.out.println("Area of circle: " + stub.calculateAreaOfCircle(5.0) + " sq. units"); 
+                    System.out.print("Volume of rectangle: " + stub.calculateVolumeOfRectangle(15.0, 19.5, 5.14) + " cubic units");
                 }
 
         }
